@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import requiredTowel from '../../assets/images/required-towel.png';
 import recommendedTowel from '../../assets/images/recommended-towel.png';
@@ -20,7 +21,7 @@ export const RenderUnits = ({ data, filterData }: any) => {
     const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
     return (
-        <div className="flex flex-wrap gap-6 w-[80%]">
+        <div className="flex justify-between flex-wrap gap-6 w-[80%]">
             {currentUnits?.map((data: any, index: number) => (
                 <div key={index} className="w-[280px] rounded-[5px] p-2 bg-[#f5f5f5] border border-[#cacaca63] shadow-lg h-[400px]">
                     <div className="text-[14px] font-bold" style={{ color: data?.opened ? '#00d200' : 'red' }}>{data?.opened ? 'Aberto' : 'Fechado'}</div>
